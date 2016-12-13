@@ -1,0 +1,39 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <h1>DYEL</h1>
+    <h3>1RM calculator</h3>
+    <div>
+        <label>Weight:</label>
+        <input id="weight" type="number" label="weight"></div>
+    </div>
+    <div>
+        <label>Reps:</label>
+        <input id="reps" type="number" label="reps"></div>
+    </div>
+    <div>
+        <button id="submit" onclick="calculate()">Submit</button>
+    </div>
+    <div id="result"></div>
+    <script>
+        var weight = document.getElementById('weight');
+        var reps = document.getElementById('reps');
+        var button = document.getElementById('submit');
+
+        function calculate() {
+            var resultContainer = document.getElementById('result')
+            if (resultContainer.children.length > 0) {
+                resultContainer.removeChild(resultContainer.firstElementChild);
+            }
+            var result = document.createElement('p');
+            result.innerHTML = "Your one rep maximum at " + weight.value + " weight for " + reps.value + " reps is " + Number(weight.value) * ( 1 + (Number(reps.value) / 30));
+            resultContainer.appendChild(result);
+        }
+    </script>
+
+</body>
+
+</html>
