@@ -1,4 +1,4 @@
-import { bcrypt } from 'bcrypt';
+import bcrypt from 'bcrypt';
 import Sequelize from 'sequelize';
 
 module.exports = function (sequelize, DataTypes) {

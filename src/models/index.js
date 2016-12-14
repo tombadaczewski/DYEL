@@ -33,8 +33,8 @@ Object.keys(db).forEach(function(modelName) {
     }
 });
 
-sequelize.sync({force:true});
-// sequelize.sync();
+// sequelize.sync({force:true});
+sequelize.sync();
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 export default db;

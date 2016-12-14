@@ -10,7 +10,11 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^1.0.1",
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
     "express": "^4.14.0",
+    "jsonwebtoken": "^7.2.1",
+    "morgan": "^1.7.0",
     "pg": "^6.1.2",
     "sequelize": "^3.27.0",
     "sqlite3": "^3.1.8"
